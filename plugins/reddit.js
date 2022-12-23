@@ -1,6 +1,6 @@
 // https://www.reddit.com/
 crawlix
-.begin
+.begin()
     // Parse contents
     .blocksParser("div.Post", block => {
         return block.innerText.indexOf("Promoted") == -1 &&
