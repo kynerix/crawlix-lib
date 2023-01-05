@@ -1,12 +1,14 @@
 // https://www.meneame.net/
 crawlix
 .begin()
+  // Accept cookies
+  .click("ACEPTO") 
 
   // Parse contents
-  .blocksParser("div.news-body")
+  .blocksParser("div.body.horizontal")
     .select("title", "h2")
-    .select("url", "h2 a", "href")
-    .select("summary", "div.news-content")
+    .select("url", "a[data-event-action='story'][data-event-label='title']", "href")
+    .select("summary", "p.link-preview")
     .select("author", "a[href ^='/user/'")
   .parse()
   
