@@ -9,7 +9,7 @@ crawlix
     .select("title", "h2")
     .select("url", "a[data-event-action='story'][data-event-label='title']", "href")
     .select("summary", "p.link-preview")
-    .select("author", "a[href ^='/user/'")
+    .select("author", "a[href ^='/user/']")
   .parse()
   
   // Updates fixed values for all contents
